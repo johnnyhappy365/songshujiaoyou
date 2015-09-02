@@ -1,0 +1,84 @@
+html
+  font-size: 16px
+h1,h2,h3,h4
+  color: $text-color-primary
+
+ul,li
+  list-style: none
+  padding: 0 0
+  margin: 0 0 
+.header
+  .row
+    margin-left: 0
+    margin-right: 0
+  .subtitle
+    color: $text-color-important
+    margin-left: 0
+  .login-btn
+    padding-left: 0
+    padding-right: 0
+  .search-form
+    padding-right: 0
+$ppt-height: 32rem
+#ppt
+  position: relative
+  height: $ppt-height
+  // .item
+    // overflow: hidden
+    // img
+      // max-width: 200%
+      // max-height: $ppt-height
+  .item
+    height: $ppt-height
+    
+    img
+      max-width: 120%
+      max-height: 400%
+      position: absolute
+      top: 0px
+      right: 0px
+      bottom: 0px
+      left: 0px
+      margin: auto 
+
+      // @include respond-to(wide-screens) 
+        // bottom: 100px
+  .carousel-caption
+    bottom: 20%
+    h3
+      font-size: 3rem
+      color: #fff
+    p
+      font-size: 1.5rem
+.content
+  margin-top: 2rem
+
+.sidebar
+  .category1
+    li
+      margin-bottom: 2rem
+      color: $text-color-primary
+    .category2
+      @extend .clearfix
+      li
+        float: left
+        margin-right: 0.5rem
+        margin-top: 1rem
+        margin-bottom: 0rem
+        a
+          color: $text-color-default
+footer
+  border-top: 1px solid rgba(0,0,0,0.1)
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+  padding-top: 1rem
+  padding-bottom: 1rem
+  .footer-items
+    text-align: center
+    margin: 0 auto
+    li
+      display: inline
+      margin: 0.5rem
+      font-size: $font-size-h4
+      color: lighten($text-color-default, 20%)
+      *
+        color: lighten($text-color-default, 20%)
