@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Songshujiaoyou</title>
+  <title>松鼠郊游</title>
+  
+  <meta charset="utf-8" /> 
+  <!--
+    Ask IE to behave like a modern browser
+    See: https://www.modern.ie/en-us/performance/how-to-use-x-ua-compatible
+  --> 
+  <meta http-equiv="x-ua-compatible" content="ie=edge" /> 
+  <!--
+    Disables zooming on mobile devices.
+  --> 
+  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= render :partial => 'layouts/header' %>
 <%= yield %>
-
+<%= render :partial => 'layouts/footer' %>
 </body>
 </html>
