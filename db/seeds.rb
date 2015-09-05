@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Book.delete_all
 Recommendation.delete_all
+Category.delete_all
 books = Book.create [
   {
     title: '黑客与画家',
@@ -89,6 +90,14 @@ my_recommendations = Recommendation.create [
     description: '我看过好多次非常不错'
     }
 ]
+computer_category = Category.create title: 'computer'
+se_category = computer_category.sub_categories.create title: '软件工程'
+pl_category = computer_category.sub_categories.create title: '编程语言'
+other_category = computer_category.sub_categories.create title: '其它'
+management_category = Category.create title: '管理'
+management_category.sub_categories.create title: '时间管理'
+management_category.sub_categories.create title: '项目管理'
+
 books[0].recommendations << douban_recommendations[0]
 books[0].recommendations << my_recommendations[0]
 books[1].recommendations << douban_recommendations[1]
@@ -98,4 +107,10 @@ books[2].recommendations << my_recommendations[2]
 books[3].recommendations << douban_recommendations[3]
 books[4].recommendations << douban_recommendations[4]
 books[5].recommendations << douban_recommendations[5]
+books[0].category = se_category
+books[1].category = pl_category
+books[2].category = pl_category
+books[3].category = pl_category
+books[4].category = pl_category
+books[5].category = other_category
 books.map &:save
