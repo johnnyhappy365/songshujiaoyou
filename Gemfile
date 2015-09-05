@@ -36,6 +36,8 @@ gem 'slim-rails'
 gem 'pry-rails'
 gem 'bootstrap-sass'
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
