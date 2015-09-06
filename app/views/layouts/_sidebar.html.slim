@@ -1,9 +1,8 @@
-.sidebar
+ui.category1
   - @categories.each do |category|
-    ui.category1
-      li 
-        = category.title
-        ul.category2
-          - category.sub_categories.each do |sub_category|
-            li 
-              a[href='#'] = sub_category.title
+    li 
+      = category.title
+      ul.category2
+        - category.sub_categories.each do |sub_category|
+          li 
+            a[href='#'] = sub_category.title

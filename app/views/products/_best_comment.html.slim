@@ -2,7 +2,7 @@
   .row.douban-comment.comment
     .col-md-12
       h2 豆瓣推荐
-  .row.products
+  .row.douban-products.products
     - @douban_best_books.each do |book|
       .col-md-2
         .book-wrap
@@ -16,7 +16,7 @@
   .row.my-comment.comment
     .col-md-12
       h2 我的推荐
-  .row.products
+  .row.my-products.products
     - @my_best_books.each do |book|
       .col-md-2
         .book-wrap
