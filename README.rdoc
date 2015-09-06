@@ -1,28 +1,35 @@
-== README
+这是一个公益项目（也许算吧），把自己一些不看的书送给需要的人，也真诚希望能成为朋友。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+同时，希望通过这个项目继续积累自己的技术经验，包括但不限于：
 
-Things you may want to cover:
+1. TDD
+2. react
+3. rails
+4. 设计
+5. 运维
 
-* Ruby version
+以下是关于该项目的一些不完整记录。
 
-* System dependencies
+## 还需要完成的工作
 
-* Configuration
+### 首页
 
-* Database creation
+4. 分类到产品列表的链接
+5. 产品到产品详情的链接
+7. 用户管理的链接
+8. 搜索到产品列表的链接
+9. 关于我的链接
+10. 捐助的链接
 
-* Database initialization
+## 完成的工作
 
-* How to run the test suite
+### 首页
 
-* Services (job queues, cache servers, search engines, etc.)
+1. ~~分类的back end开发~~
+2. ~~首页rspec~~
+3. ~~设置松鼠郊游的logo~~
+6. ~~logo到主页的链接~~
 
-* Deployment instructions
+## 如何测试
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+我使用了rspec-guard gem进行了watch模式的测试，可以使用`guard init`启动测试。

@@ -7,15 +7,22 @@
     margin-top: 0
     margin-bottom: 2rem
   .book-wrap
-    // border: 1px solid rgba(0,0,0,0.1)
     box-shadow: 0 2px 4px rgba(0,0,0,0.3)
     padding-bottom: 3rem
     font-size: $font-size-h4
     .image-wrap
       height: 8rem
       overflow: hidden
+      position: relative
       .book-image
         width: 100%
+    .image-wrap:after
+      content: ''
+      position: absolute
+      top: 0
+      height: 100%
+      background-color: red
+      // 写到这了
     .book-description
       text-align: center
       .book-title
@@ -24,6 +31,7 @@
       button
         padding: 0.2rem 0.3rem
         font-size: $font-size-h4
+
   .products
     margin-bottom: 3rem
     .col-md-2

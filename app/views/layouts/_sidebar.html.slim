@@ -1,34 +1,8 @@
-.sidebar
-  ui.category1
+ui.category1
+  - @categories.each do |category|
     li 
-      | 计算机
+      = category.title
       ul.category2
-        li 
-          a[href='#'] 编程
-        li 
-          a[href='#'] 编程2
-        li 
-          a[href='#'] 编程3
-    li 
-      | 管理
-      ul.category2
-        li 
-          a[href='#'] 时间管理
-        li 
-          a[href='#'] 编程2
-
-    li 
-      | 脑洞开
-      ul.category2
-        li 
-          a[href='#'] 编程
-        li 
-          a[href='#'] 编程2
-        li 
-          a[href='#'] 编程3
-        li 
-          a[href='#'] 编程
-        li 
-          a[href='#'] 编程2
-        li 
-          a[href='#'] 编程3
+        - category.sub_categories.each do |sub_category|
+          li 
+            a[href='#'] = sub_category.title
